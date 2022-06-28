@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand';
+  color: var(--light-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+#dark a {
+  color: var(--color-light);
+}
+
+#light a {
+  color: var(--color-dark);
+}
+
+:root {
+    
+    --bg-color-light: rgb(255, 255, 255);
+    --bg-color-dark: #000;
+    
+    --color-light: #fff;
+    --color-dark: #000;
+    
+    --bg-nav-color-light: rgb(238, 238, 238);
+    --bg-nav-color-dark: rgb(18, 17, 17);
+    --bg-nav-color-green: rgb(74, 153, 186);
+}
+
+.App {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #light {
+    background-color: var(--bg-color-light);
+  }
+  
+  #dark {
+    background-color: var(--bg-color-dark);
+  }
+
+ 
+  .switch  {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+
+  .switch label {
+    margin-right: 10px;
+  }
+  
+  #dark .switch{
+    background-color: var(--bg-color-dark);
+    color: var(--color-light);
+  }
+
+  #light .switch{
+    background-color: var(--bg-color-light);
+  }
+
+
+
+
+
+
+  
+  
+  
+
+  
