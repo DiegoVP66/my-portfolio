@@ -4,7 +4,7 @@ import "./styles.css";
 
 const Navbar = () => {
   return (
-    <nav className="navbar-container navbar sticky-top navbar-ligh navbar-expand-md">
+    <nav className="navbar-container navbar sticky-top navbar-light navbar-expand-md">
       <div className="container">
         <div className="nav-img">
           <img src={Logo} alt="" />
