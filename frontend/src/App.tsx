@@ -5,6 +5,7 @@ import Pagination from "components/Pagination";
 import Projects from "components/Projects";
 import Home from "pages/Home";
 import { createContext, useState } from "react";
+import Mail from "assets/img/mail.svg";
 import ReactSwitch from "react-switch";
 import "./App.css";
 
@@ -26,13 +27,13 @@ function App() {
           <label>{theme === "light" ? "Light Mode" : "Dark Mode"}</label>
           <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
         </div>
+        <div id="about" className="mt-4"></div>
         <Home />
-
         <About />
-
+        <div id="projects"></div>
         <div className="container">
           <div className="style-border">
-            <h1 className="text-white mt-4">Projects</h1>
+            <h1 className="text-white mt-4 pt-5">Projects</h1>
           </div>
           <Projects
             title="DsSales"
@@ -45,10 +46,17 @@ function App() {
           />
         </div>
         <div className="row pagination-container">
-          <Pagination pageCount={3} range={3} />
+          <Pagination pageCount={5} range={5} />
         </div>
-
-        <Contact />
+        <div className="app-form mt-4">
+          <div className="mt-4">
+            <Contact />
+          </div>
+          <div className="app-img">
+            <img src={Mail} alt="" />
+          </div>
+        </div>
+        <div id="contact"></div>
       </div>
     </ThemeContext.Provider>
   );

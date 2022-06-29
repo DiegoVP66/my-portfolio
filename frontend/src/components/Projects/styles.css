@@ -1,66 +1,65 @@
 .projects-container {
-    margin-top: 50px;
+  margin-top: 10px;
 }
 
-#dark .projects-container{
-    color: var(--color-light);
+#dark .projects-container {
+  color: var(--color-light);
 }
 #light .projects-container {
-    color: var(--color-dark);
+  color: var(--color-dark);
 }
-.projects-container h3{
-    text-align: center;
-}
-
-.projects{
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items:center;
-
+.projects-container h3 {
+  text-align: center;
 }
 
-.projects-content{
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.projects {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-content {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .projects-content p {
-    text-align: justify;
-    margin-top: 10px;
-    max-width: 500px;
+  text-align: justify;
+  margin-top: 10px;
+  max-width: 500px;
 }
 
 .projects-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-img img {
+  width: 200px;
+}
+@media (min-width: 576px) {
+  .projects-img img {
+    margin-right: 20px;
+    width: 300px;
+  }
+}
+
+@media (min-width: 992px) {
+  .projects-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    width: 100%;
+  }
 
-.projects-img img{
-    width: 200px;
-}
-@media (min-width:576px){
-    .projects-img img{
-        margin-right: 20px;
-        width:300px;
-    }
-}
-
-@media (min-width:992px){
-    .projects-container{
-        display: flex;
-        width: 100%;
-    }
-
-    .projects-container h3{
-        height: 30px;
-        margin-top: -40px;
-        text-align: center;
-    }
-    .projects-img img{
-        margin-right: 20px;
-        width:400px;
-    }
+  .projects-container h3 {
+    height: 30px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .projects-img img {
+    margin-right: 20px;
+    width: 400px;
+  }
 }

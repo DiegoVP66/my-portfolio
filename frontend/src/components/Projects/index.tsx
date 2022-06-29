@@ -7,7 +7,7 @@ type Props = {
 };
 const Projects = ({ title, image, content, link }: Props) => {
   return (
-    <div className="container projects-container" id="projects">
+    <div className="container projects-container">
       <div className="projects-img">
         <a href={link} target="_blank" rel="noreferrer">
           <img src={image} alt="" />

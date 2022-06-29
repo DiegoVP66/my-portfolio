@@ -1,59 +1,58 @@
 .pagination-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .pagination-item {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%; 
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: -0.015em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
-  #dark .pagination-item {
-    border: 1px solid var(--color-light);
-    background-color: var(--color-dark);
-    color: var(--color-light);
-  }
-   
-  #dark .pagination-link-active {
-    background-color: var(--bg-nav-color-green);
-  }
+.pagination-item {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
 
-  #light .pagination-item {
-    border: 1px solid var(--color-dark);
-    background-color: var(--color-light);
-    color: var(--color-dark);
-  }
+#dark .pagination-item {
+  border: 1px solid var(--color-light);
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
 
-  #light .pagination-link-active {
-    background-color: var(--bg-nav-color-green);
-  }
-  
-  .arrow-previous {
-    transform: rotate(-180deg);
-  }
-  
-  .arrow-next {
-    margin-left: 10px;
-  }
-  
-  
-  .pagination-arrow-container {
-    display: flex;
-    align-items: center;
-  }
+#dark .pagination-link-active {
+  background-color: var(--bg-nav-color-green);
+}
 
-  @media(min-width: 992px){
-    .pagination-container{
-        margin-top: 10px;
-    }
+#light .pagination-item {
+  border: 1px solid var(--color-dark);
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+#light .pagination-link-active {
+  background-color: var(--bg-nav-color-green);
+}
+
+.arrow-previous {
+  transform: rotate(-180deg);
+}
+
+.arrow-next {
+  margin-left: 10px;
+}
+
+.pagination-arrow-container {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .pagination-container {
+    margin-top: 10px;
   }
+}

@@ -1,5 +1,98 @@
-.form-container{
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  margin-top: 10px;
+  width: 100%;
+  padding: 30px;
+  font-size: 16px;
+}
+
+.form-align {
+  margin-right: 10px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.contact-title {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+#dark .contact-title {
+  color: var(--color-light);
+  border-bottom: 1px solid var(--color-light);
+}
+
+#light .contact-title {
+  color: var(--color-dark);
+  border-bottom: 1px solid var(--color-dark);
+}
+
+.form input,
+textarea {
+  width: 100%;
+  padding: 20px;
+}
+
+form input {
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.form-message {
+  border: 1px solid red;
+  width: 100px;
+}
+
+.message-box textarea {
+  height: 200px;
+}
+
+.invalid-feedback {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.btn-container button {
+  background-color: var(--form-color-light);
+  border-radius: 10%;
+}
+
+#dark .btn-container button {
+  background-color: var(--bg-nav-color-green);
+  color: var(--color-light);
+}
+
+#light .btn-container button {
+  background-color: var(--bg-nav-color-green);
+  color: var(--color-dark);
+}
+
+.btn-adjust {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-register {
+  width: 80px;
+  height: 50px;
+  margin-top: 25px;
+  margin-right: 30px;
+}
+
+#dark .btn-container button:hover {
+  background-color: var(--form-color-light);
+}
+
+#light .btn-container button:hover {
+  background-color: var(--form-color-light);
+}
+
+@media (min-width: 1020px) {
+  .form input,
+  textarea {
+    width: 500px;
+  }
 }
