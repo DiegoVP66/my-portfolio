@@ -19,22 +19,28 @@ a {
   color: var(--color-dark);
 }
 
+ul li {
+  list-style: none;
+}
+
 :root {
-    
-    --bg-color-light: rgb(255, 255, 255);
-    --bg-color-dark: #000;
-    
-    --color-light: #fff;
-    --color-dark: #000;
+  
+  --bg-color-light: rgb(255, 255, 255);
+  --bg-color-dark: #000;
+  
+  --color-light: #fff;
+  --color-dark: #000;
     
     --bg-nav-color-light: rgb(238, 238, 238);
-    --bg-nav-color-dark: rgb(18, 17, 17);
+    --bg-nav-color-dark: rgba(18, 17, 17, 0.98);
     --bg-nav-color-green: rgb(74, 153, 186);
+    
+    --social-bg-color: rgba(16, 15, 15, 0.589);
+    --social-bg-light-color:  rgba(174, 170, 170, 0.228);
 }
 
 .App {
     width: 100vw;
-    height: 100vh;
   }
 
   #light {
@@ -51,6 +57,7 @@ a {
     justify-content: flex-end;
     margin-right: 20px;
     margin-top: 10px;
+    z-index: 1;
   }
 
   .switch label {
@@ -65,6 +72,21 @@ a {
   #light .switch{
     background-color: var(--bg-color-light);
   }
+
+  .base-card {
+    border-radius: 20px;
+  }
+
+  .style-border{
+    border-bottom: 1px solid var(--color-light);
+  }
+
+  #light .style-border h1{
+    color: var(--color-dark)!important;
+    border-bottom: 1px solid var(--color-dark)!important;
+  }
+
+
 
 
 
