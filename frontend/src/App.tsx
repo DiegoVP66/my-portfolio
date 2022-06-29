@@ -8,6 +8,8 @@ import { createContext, useState } from "react";
 import Mail from "assets/img/mail.svg";
 import ReactSwitch from "react-switch";
 import "./App.css";
+import Footer from "components/Footer";
+
 
 export const ThemeContext = createContext({} || null);
 
@@ -55,8 +57,9 @@ function App() {
           <div className="app-img">
             <img src={Mail} alt="" />
           </div>
+          <div id="contact"></div>
         </div>
-        <div id="contact"></div>
+        <Footer />
       </div>
     </ThemeContext.Provider>
   );

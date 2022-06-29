@@ -1,0 +1,11 @@
+#dark .foot {
+  border-top: 1px solid var(--color-light);
+  color: var(--color-light);
+  background-color: var(--bg-nav-color-dark);
+}
+
+#light .foot {
+  border-top: 1px solid var(--color-dark);
+  color: var(--color-dark);
+  background-color: var(--bg-nav-color-light);
+}

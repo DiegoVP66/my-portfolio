@@ -93,6 +93,6 @@ form input {
 @media (min-width: 1020px) {
   .form input,
   textarea {
-    width: 500px;
+    width: 600px;
   }
 }
