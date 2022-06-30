@@ -14,6 +14,8 @@ import { Project } from "types/projects";
 import { AxiosRequestConfig } from "axios";
 import { makeBackendRequest } from "utils/request";
 import { AboutMe } from "types/about";
+import "react-toastify/dist/ReactToastify.css"; // import first
+import { ToastContainer } from "react-toastify";
 
 /* Pagination active page && context */
 export const ThemeContext = createContext({} || null);
@@ -82,20 +84,34 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <ToastContainer />
       <div className="App" id={theme}>
+        {/* Home id link */}
         <div id="home"></div>
+
+        {/* Navbar section */}
         <Navbar />
+
+        {/* Switch section */}
         <div className="switch">
           <label>{theme === "light" ? "Light Mode" : "Dark Mode"}</label>
           <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
         </div>
+
+        {/* About id link */}
         <div id="about" className="mt-4"></div>
+
+        {/* Home section */}
         <Home />
+
+        {/* About section */}
         {abouts.map((about) => (
           <div key={about.id}>
             <About about={about} />
           </div>
         ))}
+
+        {/* Project section */}
         <div id="projects"></div>
         <div className="container">
           <div className="style-border">
@@ -109,6 +125,7 @@ function App() {
             ))}
           </div>
         </div>
+        {/* Pagination section */}
         <div className="row pagination-container">
           <Pagination
             pageCount={page ? page.totalPages : 0}
@@ -116,6 +133,7 @@ function App() {
             onChange={handlePageChange}
           />
         </div>
+        {/* Contact section */}
         <div className="app-form mt-4">
           <div className="mt-4">
             <Contact />
@@ -123,8 +141,12 @@ function App() {
           <div className="app-img">
             <img src={Mail} alt="" />
           </div>
+
+          {/* Contact link */}
           <div id="contact"></div>
         </div>
+
+        {/* Footer section */}
         <Footer />
       </div>
     </ThemeContext.Provider>
