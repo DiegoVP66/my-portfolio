@@ -27,8 +27,8 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 	
 
 	private static final String[] PUBLIC = { "/oauth/token", "/h2-console/**", "/projects/**"};
-	private static final String[] CONTACT = { "/projects/**", "/about/**", "/contacts/**" };
-	private static final String[] ADMIN = { "/users/**","/roles/**" };
+	private static final String[] CONTACT = { "/projects/**", "/about/**", "/contacts/**", "/roles/**", "/users/**" };
+	private static final String[] ADMIN = { "/test/**" };
 
 	
 	@Override
