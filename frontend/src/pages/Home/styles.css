@@ -23,12 +23,12 @@
   width: 300px;
   font-size: 24px;
 }
-.main h1 h2 {
+.main h2 {
   font-size: 25px;
   font-weight: 700;
 }
 
-.main h1 h2 {
+.main h2 {
   white-space: nowrap;
   overflow: hidden;
   animation: typewriter 2s steps(13), blink 400ms steps(13) infinite normal;

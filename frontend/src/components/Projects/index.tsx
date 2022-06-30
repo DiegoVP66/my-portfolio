@@ -1,22 +1,20 @@
+import { Project } from "types/projects";
 import "./styles.css";
 type Props = {
-  title: string;
-  image: string;
-  content: string;
-  link: string;
+  project : Project
 };
-const Projects = ({ title, image, content, link }: Props) => {
+const Projects = ({ project }: Props) => {
   return (
     <div className="container projects-container">
       <div className="projects-img">
-        <a href={link} target="_blank" rel="noreferrer">
-          <img src={image} alt="" />
+        <a href={project.link} target="_blank" rel="noreferrer">
+          <img src={project.image} alt="" />
         </a>
       </div>
-      <h3>{title}</h3>
+      <h3>{project.title}</h3>
       <div className="projects">
         <div className="projects-content">
-          <p>{content}</p>
+          <p>{project.content}</p>
         </div>
       </div>
     </div>

@@ -1,0 +1,3 @@
+INSERT INTO tb_project (title, image, content, link) VALUES ('DsSales', 'https://user-images.githubusercontent.com/84286836/154867839-6c5b7642-38e4-4506-a8ec-d76a3e400ec7.png', 'Projeto dsSales', 'https://github.com/DiegoVP66/sales-dashboard');
+INSERT INTO tb_project (title, image, content, link) VALUES ('DIO-CSS-CHALLENGE', 'https://user-images.githubusercontent.com/84286836/169931301-9f8a3cb2-f89b-4a34-ba28-965b11e92a08.png', 'Projeto dsSales', 'https://github.com/DiegoVP66/sales-dashboard');
+INSERT INTO tb_project (title, image, content, link) VALUES ('GitHub API', 'https://user-images.githubusercontent.com/84286836/154868446-7b491605-8c16-408b-b8a1-461c862f58ed.png', 'Projeto dsSales', 'https://github.com/DiegoVP66/sales-dashboard');
