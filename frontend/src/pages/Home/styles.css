@@ -31,7 +31,7 @@
 .main h2 {
   white-space: nowrap;
   overflow: hidden;
-  animation: typewriter 2s steps(13), blink 400ms steps(13) infinite normal;
+  animation: typewriter 3s steps(20), blink 800ms steps(20) infinite normal;
 }
 
 @keyframes typewriter {

@@ -1,7 +1,7 @@
 import { Project } from "types/projects";
 import "./styles.css";
 type Props = {
-  project : Project
+  project: Project;
 };
 const Projects = ({ project }: Props) => {
   return (
@@ -14,7 +14,13 @@ const Projects = ({ project }: Props) => {
       <h3>{project.title}</h3>
       <div className="projects">
         <div className="projects-content">
-          <p>{project.content}</p>
+          <p>
+            {project.content}
+            <br />
+            <a href={project.repository} target="_blank" rel="noreferrer">
+              saiba mais...
+            </a>
+          </p>
         </div>
       </div>
     </div>

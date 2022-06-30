@@ -4,4 +4,5 @@ export type Project = {
   image: string;
   content: string;
   link: string;
+  repository: string;
 };
