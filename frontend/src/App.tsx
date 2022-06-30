@@ -13,31 +13,39 @@ import { SpringPage } from "types/spring";
 import { Project } from "types/projects";
 import { AxiosRequestConfig } from "axios";
 import { makeBackendRequest } from "utils/request";
+import { AboutMe } from "types/about";
 
+/* Pagination active page && context */
 export const ThemeContext = createContext({} || null);
-
 type ControlComponentsData = {
   activePage: number;
 };
 
 function App() {
+  /* Theme config */
   const [theme, setTheme] = useState("light");
 
   const toggleTheme = () => {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
   };
+  /*------------------------------------------------------------*/
 
+  /*------------------------------------------------------------*/
+  /* Project config */
   const [page, setPage] = useState<SpringPage<Project>>();
   const [controlComponentsData, setControlComponentsData] =
     useState<ControlComponentsData>({
       activePage: 0,
     });
+
+  /* Pagination function */
   const handlePageChange = (pageNumber: number) => {
     setControlComponentsData({
       activePage: pageNumber,
     });
   };
 
+  /* Project GET method */
   const getProjects = useCallback(() => {
     const config: AxiosRequestConfig = {
       method: "GET",
@@ -57,6 +65,20 @@ function App() {
   useEffect(() => {
     getProjects();
   }, [getProjects]);
+  /*------------------------------------------------------------*/
+
+  /* About config */
+  const [abouts, setAbout] = useState<AboutMe[]>([]);
+
+  useEffect(() => {
+    const config: AxiosRequestConfig = {
+      url: "/about",
+    };
+
+    makeBackendRequest(config).then((response) => {
+      setAbout(response.data);
+    });
+  }, []);
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
@@ -69,7 +91,11 @@ function App() {
         </div>
         <div id="about" className="mt-4"></div>
         <Home />
-        <About />
+        {abouts.map((about) => (
+          <div key={about.id}>
+            <About about={about} />
+          </div>
+        ))}
         <div id="projects"></div>
         <div className="container">
           <div className="style-border">
