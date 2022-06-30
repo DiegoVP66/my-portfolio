@@ -1,4 +1,4 @@
-package com.diegovp.dvp.components;
+package com.diegovp.dvp.config;
 
 import java.util.Arrays;
 
@@ -27,7 +27,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 	
 
 	private static final String[] PUBLIC = { "/oauth/token", "/h2-console/**", "/projects/**"};
-	private static final String[] CONTACT = { "/contact/**" };
+	private static final String[] CONTACT = { "/projects/**" };
 	private static final String[] ADMIN = { "/users/**","/roles/**" };
 
 	
