@@ -16,6 +16,8 @@ import { makeBackendRequest } from "utils/request";
 import { AboutMe } from "types/about";
 import "react-toastify/dist/ReactToastify.css"; // import first
 import { ToastContainer } from "react-toastify";
+import CardLoader from "components/CardLoader";
+import ProjectLoader from "components/ProjectLoader";
 
 /* Pagination active page && context */
 export const ThemeContext = createContext({} || null);
@@ -58,10 +60,14 @@ function App() {
         size: 1,
       },
     };
-
-    makeBackendRequest(config).then((response) => {
-      setPage(response.data);
-    });
+    setIsLoading(true);
+    makeBackendRequest(config)
+      .then((response) => {
+        setPage(response.data);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   }, [controlComponentsData]);
 
   useEffect(() => {
@@ -81,6 +87,8 @@ function App() {
       setAbout(response.data);
     });
   }, []);
+
+  const [isLoading, setIsLoading] = useState(false);
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
@@ -105,11 +113,18 @@ function App() {
         <Home />
 
         {/* About section */}
-        {abouts.map((about) => (
-          <div key={about.id}>
-            <About about={about} />
+        {isLoading ? (
+          <div>
+            <CardLoader />
+            <span>Loading...</span>
           </div>
-        ))}
+        ) : (
+          abouts?.map((about) => (
+            <div key={about.id}>
+              <About about={about} />
+            </div>
+          ))
+        )}
 
         {/* Project section */}
         <div id="projects"></div>
@@ -117,13 +132,17 @@ function App() {
           <div className="style-border">
             <h1 className="text-white mt-4 pt-5">Projects</h1>
           </div>
-          <div>
-            {page?.content.map((item) => (
-              <div key={item.id}>
-                <Projects project={item} />
+          {isLoading ? (
+            <div>
+              <ProjectLoader />
+            </div>
+          ) : (
+            page?.content.map((project) => (
+              <div key={project.id}>
+                <Projects project={project} />
               </div>
-            ))}
-          </div>
+            ))
+          )}
         </div>
         {/* Pagination section */}
         <div className="row pagination-container">
