@@ -1,0 +1,31 @@
+.contact-crud-container {
+  height: 100vh;
+  width: 99%;
+}
+
+.contact-crud {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.contact-crud-card {
+  width: 100%;
+}
+
+.contact-crud-img {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .contact-crud-img {
+    display: unset;
+    width: 100%;
+  }
+
+  .contact-crud-img img {
+    width: 90%;
+  }
+}

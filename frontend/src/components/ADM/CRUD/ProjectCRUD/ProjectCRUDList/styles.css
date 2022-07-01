@@ -1,0 +1,39 @@
+.list-project-crud-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.list-project-crud-container {
+  background-color: var(--dark-color);
+  padding: 10px;
+  max-width: 600px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-pagination-container {
+  margin-bottom: 100px;
+}
+
+.projects-crud-img {
+  display: none;
+}
+@media (min-width: 768px) {
+  .list-project-crud-containers {
+    margin-right: 30px;
+  }
+  .projects-crud-img {
+    display: unset;
+  }
+  .projects-crud-img img {
+    width: 500px;
+  }
+}
+
+@media (min-width: 992px) {
+  .list-project-crud-flex {
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,17 @@
+.message-container {
+  background-color: var(--color-dark);
+  margin-top: 10px;
+  border-radius: 30px;
+  padding: 0 15px 10px 15px;
+  height: auto;
+}
+.message-content-container {
+  background-color: var(--bg-nav-color-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+}

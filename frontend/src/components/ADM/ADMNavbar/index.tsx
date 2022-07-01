@@ -1,5 +1,6 @@
 import Logo from "assets/img/logo.svg";
 import "bootstrap/js/src/collapse.js";
+import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./styles.css";
 
@@ -29,6 +30,10 @@ const ADMNavbar = () => {
             <li>
               <Link to="/">Home</Link>
             </li>
+            <li>
+              <NavLink to="/admin/crud">Projects</NavLink>
+            </li>
+            <NavLink to="/contact">Messages</NavLink>
             <li>
               <Link to="/">Logout</Link>
             </li>
