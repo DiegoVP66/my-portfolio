@@ -9,3 +9,7 @@
   color: var(--color-dark);
   background-color: var(--bg-nav-color-light);
 }
+
+.zap-img img {
+  width: 40px;
+}

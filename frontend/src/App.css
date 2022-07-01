@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap");
-
+html {
+  background-color: var(--login-bg-color);
+}
 body {
   margin: 0;
   padding: 0;
@@ -38,6 +40,9 @@ ul li {
   --social-bg-light-color: rgba(174, 170, 170, 0.228);
 
   --form-color-light: rgba(255, 255, 255, 0.153);
+
+  --login-dark-color: rgba(0, 0, 0, 0.089);
+  --login-bg-color: rgba(90, 89, 89, 0.162);
 }
 
 .App {

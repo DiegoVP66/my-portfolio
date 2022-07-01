@@ -1,3 +1,4 @@
+import WZap from "assets/img/zap.svg";
 import "./styles.css";
 const Footer = () => {
   return (
@@ -9,6 +10,8 @@ const Footer = () => {
               className="btn btn-outline-light btn-floating m-1"
               href="https://www.instagram.com/dvpdev/"
               role="button"
+              target="_blank"
+              rel="noreferrer"
             >
               <i className="fab fa-instagram"></i>
             </a>
@@ -37,7 +40,12 @@ const Footer = () => {
 
         <div className="text-center p-3">
           © 2022
-          <span> vp.diego28@gmail.com</span>
+          <span> vp.diego28@gmail.com </span>
+          <span className="zap-img">
+            <a href="https://wa.me/5541984916992">
+              <img src={WZap} alt="" />
+            </a>
+          </span>
         </div>
       </footer>
     </div>
