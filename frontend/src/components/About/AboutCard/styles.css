@@ -1,0 +1,21 @@
+.about-card-crud {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  height: 100vh;
+  border: 1px solid red;
+}
+
+.about-card-crud p {
+  max-width: 800px;
+}
+
+.about-card-crud img {
+  width: 100%;
+  max-width: 700px;
+}

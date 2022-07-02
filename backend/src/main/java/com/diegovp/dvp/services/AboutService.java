@@ -1,6 +1,7 @@
 package com.diegovp.dvp.services;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import javax.persistence.EntityNotFoundException;
@@ -24,6 +25,13 @@ public class AboutService {
 	public List<AboutDTO> findAll() {
 		List<About> list = repository.findAll();
 		return list.stream().map(x -> new AboutDTO(x)).collect(Collectors.toList());
+	}
+	
+	@Transactional(readOnly = true)
+	public AboutDTO findById(Long id) {
+		Optional<About> obj = repository.findById(id);
+		About entity = obj.orElseThrow(() -> new ResourceNotFoundException("Id not found:" + id));
+		return new AboutDTO(entity);
 	}
 
 	@Transactional

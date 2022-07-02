@@ -23,12 +23,15 @@ public class About implements Serializable {
 	@Column(columnDefinition = "TEXT")
 	private String content;
 
+	private String image;
+
 	public About() {
 	}
 
-	public About(Long id, String content) {
+	public About(Long id, String content, String image) {
 		this.id = id;
 		this.content = content;
+		this.image = image;
 	}
 
 	public Long getId() {
@@ -45,6 +48,14 @@ public class About implements Serializable {
 
 	public void setContent(String content) {
 		this.content = content;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
 	}
 
 	@Override

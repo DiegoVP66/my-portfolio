@@ -33,6 +33,9 @@ const ADMNavbar = () => {
             <li>
               <NavLink to="/admin/crud">Projects</NavLink>
             </li>
+            <li>
+              <NavLink to="/about">About</NavLink>
+            </li>
             <NavLink to="/contact">Messages</NavLink>
             <li>
               <Link to="/">Logout</Link>

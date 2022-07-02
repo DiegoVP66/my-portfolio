@@ -1,4 +1,3 @@
-import ProfilePic from "assets/img/barba.jpg";
 import Git from "assets/img/github.svg";
 import In from "assets/img/linkedin.svg";
 import { AboutMe } from "types/about";
@@ -33,7 +32,7 @@ const About = ({ about }: Props) => {
           <p>{about.content}</p>
         </div>
         <div className="img-profile-container">
-          <img src={ProfilePic} alt="" />
+          <img src={about.image} alt="" />
         </div>
       </div>
     </div>

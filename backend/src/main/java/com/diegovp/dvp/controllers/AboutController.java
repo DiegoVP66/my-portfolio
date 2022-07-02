@@ -26,6 +26,11 @@ public class AboutController {
 		List<AboutDTO> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
+	@GetMapping(value = "/{id}")
+	public ResponseEntity<AboutDTO> findById(@PathVariable Long id) {
+		AboutDTO dto = service.findById(id);
+		return ResponseEntity.ok().body(dto);
+	}
 
 	@PutMapping(value = "/{id}")
 	public ResponseEntity<AboutDTO> update(@PathVariable Long id, @RequestBody AboutDTO dto) {
