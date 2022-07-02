@@ -25,7 +25,7 @@ type ControlComponentsData = {
 };
 const AppComponent = () => {
   /* Theme config */
-  const [theme, setTheme] = useState("dark");
+  var [theme, setTheme] = useState("light");
 
   const toggleTheme = () => {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));

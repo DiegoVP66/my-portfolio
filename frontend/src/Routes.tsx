@@ -13,7 +13,16 @@ const RoutesComponent = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<AppComponent />} />
-        <Route path="/admin/auth/login" element={<ADM />} />
+
+        {!isAuthenticated() ? (
+          <Route path="/admin/auth/login" element={<ADM />} />
+        ) : (
+          <Route
+            path="/admin/auth/login"
+            element={<Navigate to="/admin/crud" />}
+          />
+        )}
+
         {isAuthenticated() ? (
           <Route path="/admin/crud" element={<CRUD />} />
         ) : (

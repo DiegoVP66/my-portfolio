@@ -27,7 +27,9 @@ const AboutCRUDList = () => {
           <AboutCard about={item} />
         </div>
       ))}
-      <Footer />
+      <div className="bg-dark text-white">
+        <Footer />
+      </div>
     </div>
   );
 };

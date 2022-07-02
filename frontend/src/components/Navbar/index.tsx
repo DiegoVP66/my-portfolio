@@ -1,5 +1,6 @@
 import Logo from "assets/img/logo.svg";
 import "bootstrap/js/src/collapse.js";
+
 import "./styles.css";
 
 const Navbar = () => {

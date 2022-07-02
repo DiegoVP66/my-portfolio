@@ -2,6 +2,7 @@ import ContactCRUDCard from "./ContactCRUDCard";
 import ContactImg from "assets/img/contact.svg";
 import "./styles.css";
 import ADMNavbar from "components/ADM/ADMNavbar";
+import Footer from "components/Footer";
 
 const ContactCRUD = () => {
   return (
@@ -18,6 +19,9 @@ const ContactCRUD = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="bg-dark text-white">
+        <Footer />
       </div>
     </>
   );

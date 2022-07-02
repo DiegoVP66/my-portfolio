@@ -43,7 +43,18 @@
 .main-menu {
   display: flex;
   font-size: 18px;
-  width: 85%;
+  width: 75%;
   justify-content: space-around;
   padding-left: 100px;
+}
+
+.adm-nav a {
+  color: var(--bg-nav-color-green) !important;
+}
+
+@media (min-width: 768px) {
+  .main-menu {
+    width: 100%;
+    font-size: 16px;
+  }
 }

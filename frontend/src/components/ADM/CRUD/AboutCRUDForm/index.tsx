@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
 import { AboutMe } from "types/about";
 import { makeBackendRequest } from "utils/request";
+import AboutImg from "assets/img/aboutForm.svg";
 
 import "./styles.css";
 
@@ -102,8 +103,11 @@ const AboutCRUDForm = () => {
             </div>
           </form>
         </div>
+        <div>
+          <img src={AboutImg} alt="" />
+        </div>
       </div>
-      
+
       <div className="bg-dark text-white">
         <Footer />
       </div>

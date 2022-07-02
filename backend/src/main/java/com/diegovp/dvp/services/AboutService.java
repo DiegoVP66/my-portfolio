@@ -39,6 +39,7 @@ public class AboutService {
 		try {
 			About entity = repository.getReferenceById(id);
 			entity.setContent(dto.getContent());
+			entity.setImage(dto.getImage());
 			entity = repository.save(entity);
 			return new AboutDTO(entity);
 		} catch (EntityNotFoundException e) {

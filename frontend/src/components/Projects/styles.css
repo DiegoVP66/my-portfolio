@@ -39,7 +39,6 @@
 
 .projects-img img {
   width: 200px;
-  max-height: 300px;
 }
 @media (min-width: 576px) {
   .projects-img img {
@@ -61,6 +60,6 @@
   }
   .projects-img img {
     margin-right: 20px;
-    width: 400px;
+    width: 500px;
   }
 }

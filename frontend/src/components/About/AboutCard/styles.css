@@ -8,7 +8,6 @@
   background-color: var(--color-dark);
   color: var(--color-light);
   height: 100vh;
-  border: 1px solid red;
 }
 
 .about-card-crud p {
@@ -16,6 +15,11 @@
 }
 
 .about-card-crud img {
-  width: 100%;
-  max-width: 700px;
+  width: 300px;
+}
+
+@media (min-width: 576px) {
+  .about-card-crud img {
+    width: 500px;
+  }
 }
